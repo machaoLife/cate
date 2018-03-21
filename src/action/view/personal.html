@@ -1,0 +1,42 @@
+<div>
+    <!-- 个人中心 -->
+    <div class="personal-main">
+        <div class="personal-left">
+            <!-- 用户头部 -->
+            <div>
+                <img ng-src="{{user.header}}" alt=""/>
+                <span>马超</span>
+                <p>大口吃会员</p>
+            </div>
+            <ul>
+                <li class="personal-left-nav">
+                    <a ui-sref="personal.centre" class="menu-active">
+                        <i class="fa fa-user"></i>
+                        <span>我的收藏</span>
+                    </a>
+                </li>
+                <li class="personal-left-nav">
+                    <a ui-sref="personal.step">
+                        <i class="fa fa-sticky-note-o"></i>
+                        <span>我的帖子</span>
+                    </a>
+                </li>
+                <li class="personal-left-nav">
+                    <a ui-sref="personal.data">
+                        <i class="fa fa-address-card"></i>
+                        <span>修改资料</span>
+                    </a>
+                </li>
+                <li class="personal-left-nav">
+                    <a ui-sref="personal.password">
+                        <i class="fa fa-clipboard"></i>
+                        <span>修改密码</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="personal-right">
+            <ui-view></ui-view>
+        </div>
+    </div>
+</div>

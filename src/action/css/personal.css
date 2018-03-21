@@ -1,0 +1,272 @@
+.personal-main{
+    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+.personal-main:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.personal-left{
+    float: left;
+    width: 200px;
+    border: 1px solid #eee;
+    box-shadow: 6px 0px 7px rgba(0,0,0,0.3);
+}
+.personal-left>div{
+    padding-top: 30px;
+    text-align: center;
+}
+.personal-left>div>img{
+    display: block;
+    margin: 0 auto;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+.personal-left>div>span:nth-of-type(1){
+    color: #444;
+    line-height: 32px;
+}
+.personal-left>div>p{
+    color: #FF6767;
+    line-height: 24px;
+}
+.personal-left>ul{
+    padding: 80px 0;
+}
+.personal-left-nav{
+    margin-bottom: 30px;
+    padding-left: 55px;
+    font-size: 16px;
+    line-height: 20px;
+}
+.personal-left-nav>a{
+    display: block;
+}
+.personal-left-nav>a:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.personal-left-nav>a>i{
+    margin-right: 10px;
+    float: left;
+    display: block;
+    width: 18px;
+}
+.personal-left-nav>a>span{
+    float: left;
+    margin-left: 5px;
+}
+.personal-right{
+    float: left;
+    width: 800px;
+    margin-left: 40px;
+}
+
+/*
+    收藏菜单
+*/
+.centre-title{
+    line-height: 30px;
+    font-size: 20px;
+    margin: 14px 0;
+}
+.centre-title>h3{
+    display: inline-block;
+    font-size: 22px;
+    color:#444;
+}
+.centre-title>span{
+    color:#ff6767;
+    font-size: 17px;
+}
+.centre-main{
+    width: 100%;
+}
+.centre-main:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.centre-main>div{
+    width:200px;
+    height: 250px;
+    float: left;
+    margin-right: 20px;
+}
+.centre-main-image{
+    width:200px;
+    height: 200px;
+    overflow: hidden;
+    display: block;
+}
+.centre-main>div:nth-child(3n){
+    margin-right: 0;
+}
+.centre-main>div:hover img{
+    transform: scale(1.1,1.1);
+}
+.centre-main-image>img{
+    display: block;
+    width: 200px;
+    height: 200px;
+    transition: all 0.5s;
+}
+.centre-main-content{
+    width: 200px;
+    height: 60px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.centre-main-content>p:nth-of-type(2){
+    font-size: 13px;
+    color: #666;
+}
+.centre-main-content>p>a{
+    font-size: 17px;
+    width: 170px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+/*
+    修改资料
+*/
+.data-main{
+    width: 400px;
+    margin-left: 300px;
+}
+.data-header>div>img{
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+.centre-null{
+    margin-top: 40px;
+    width: 100%;
+    text-align: center;
+}
+.centre-null>a{
+    font-size: 20px;
+    font-weight: 600;
+    color: #bd997b;
+}
+.data-main>input:hover{
+    border-color: #FF817B !important;
+    color:#FF817B !important;
+}
+.data-header>div>button{
+    margin: 12px 0;
+    width: 100px;
+    height: 30px;
+    border-radius: 3px;
+    text-align: center;
+    color: #666;
+    line-height: 30px;
+    border:1px solid #999;
+    background-color: #e2e2e2;
+}
+.data-name{
+    height: 48px;
+    margin: 8px 0;
+}
+.data-name-error{
+    display: inline-block;
+    margin-left: 20px;
+    color: #FF817B;
+}
+.data-name>input{
+    width: 320px;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    line-height: 40px;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid #e2e2e2;
+}
+.data-sex{
+    margin: 15px 0;
+}
+.data-sex>label{
+    margin-right: 25px;
+}
+.data-sex input{
+    width: 20px;
+    height: 20px;
+}
+#dataSave{
+    margin-top: 40px;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    outline: none;
+    border-radius: 3px;
+    background-color: #FF817B;
+    color: #fff;
+    border: 1px solid #FF817B;
+    text-align: center;
+    cursor: pointer;
+}
+
+/*
+    修改密码
+*/
+.password-main{
+    width: 360px;
+    margin:20px auto;
+    position:relative;
+}
+.password-list{
+    position: relative;
+    padding-bottom: 30px;
+}
+.password-list>input{
+    width: 100%;
+    height: 46px;
+    box-sizing: border-box;
+    padding: 0 30px;
+    line-height: 46px;
+    border-radius: 21px;
+    outline: 0;
+    border: 1px solid #999;
+    font-size: 15px;
+}
+.password-list>input:hover{
+    border-color: #f64040;
+    color: #f64040;
+}
+.pwd-error{
+    position: absolute;
+    left: 20px;
+    bottom:7px;
+    color: #f64040;
+    line-height: 20px;
+    font-size: 14px;
+}
+#pwdSave{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 25px;
+    font-size: 18px;
+    border: 0;
+    background-color:#f64040 ;
+    color: #fff;
+    cursor: pointer;
+}
+.password-error{
+    position: absolute;
+    left: 137px;
+    bottom: 56px;
+    color: #f64040;
+    line-height: 20px;
+    font-size: 14px;
+}

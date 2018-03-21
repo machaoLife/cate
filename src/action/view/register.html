@@ -1,0 +1,49 @@
+<div>
+    <!--  <div class="head">
+          <a ui-sref="index"><img src="images/login.png" alt=""/></a>
+          <div class="logo-name">
+              <a ui-sref="index"><span>www.gulpmc.com.cn</span>
+                  <span>大口吃美食网站</span></a>
+          </div>
+      </div>-->
+
+    <div class="login-conainer">
+        <div class="login-left">
+            <img src="images/login-bg.jpg">
+        </div>
+        <div class="login">
+            <div class="login-header">
+                <span>注册</span>
+            </div>
+            <div class="login-main">
+                <form name="fm" id="fm">
+                    <div class="login-user">
+                        <div class='icon'>
+                            <i class="fa fa-user"></i>
+                        </div>
+                        <input name="phone" required ng-model="user.phone" placeholder='手机号'  pattern="^1[3578]\d{9}$" type='text' id="phone"/>
+                        <span class="error" ng-show="fm.phone.$dirty && fm.phone.$error.required">手机号不能为空!</span>
+                        <span class="error"  ng-show="fm.phone.$dirty && fm.phone.$error.pattern">手机号格式不正确!</span>
+                    </div>
+                    <div class="login-code">
+                        <input type="text" required name="code" ng-model="user.code"  maxlength="4" id="code"/>
+                        <button type="button" ng-click="getCard();" ng-class="(fm.phone.$valid&&fm.phone.$dirty)?'login-verify':''" ng-disabled="cardTime&&fm.user.phone.$invalid">{{cardContent}}</button>
+                        <span class="error" ng-show="fm.code.$dirty && fm.code.$error.required">验证码不能为空!</span>
+                    </div>
+                    <div class="login-password">
+                        <div class='icon'>
+                            <i class="fa fa-unlock-alt"></i>
+                        </div>
+                        <input name="password" ng-model="user.password" placeholder='密码' required  maxlength="16" type='password' pattern="^\w{6,12}$" id="password">
+                        <span class="error" ng-show="fm.password.$dirty && fm.password.$error.required">密码不能为空!</span>
+                        <span class="error"  ng-show="fm.password.$dirty && fm.password.$error.pattern">密码格式不正确!</span>
+                    </div>
+                    <div class="login-submit">
+                        <button  id="loginBtn" ng-disabled="!fm.$valid"  ng-click="sumbit();">注册</button>
+                    </div>
+                    <span class="login-error" ng-show="loginError">手机号或密码不正确！</span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

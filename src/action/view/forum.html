@@ -1,0 +1,43 @@
+<div>
+    <!-- 美食论坛 -->
+    <div class="forum-top">
+        美食论坛,我所有的朋友都是吃货
+    </div>
+
+    <!-- 论坛列表 -->
+    <div class="forum-main">
+        <div class="forum-list">
+            <div ng-repeat="item in pageList">
+                <div class="forum-list-title">
+                    <img lazy-src="{{item.header}}" alt="{{item.nickName}}"/>
+                    <span>{{item.nickName}}</span>
+                    <p>{{item.issueTime}}</p>
+                </div>
+                <div class="forum-list-main">
+                    <a ui-sref="forumDetails({forumId:item.id})">
+                        <h3>{{item.title}}</h3>
+                        <span>#大口吃#  {{item.content}}</span>
+                    </a>
+                    <a ui-sref="forumDetails({forumId:item.id})" class="forum-img-list">
+                        <img ng-src="{{list}}" ng-repeat="list in item.imageList" alt=""/>
+                    </a>
+                </div>
+            </div>
+            <page-nav conf="pageMessage" page="btnPage();"></page-nav>
+        </div>
+        <div class="forum-issue">
+            <a id="issueForum">发布帖子</a>
+            <div>
+                <img src="images/forum-bg.png" alt=""/>
+                <div class="forum-issue-join">
+                    <p>
+                        除了美食菜谱
+                    </p>
+                    <p>
+                        还有更多社区妹妹,快加入大口吃社区吧
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

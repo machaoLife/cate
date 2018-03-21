@@ -1,0 +1,22 @@
+<div>
+
+    <!-- 论坛详情 -->
+    <div class="forumDetails-main">
+        <h3>{{forum.title}}</h3>
+        <div class="forumDetails-left">
+            <div class="forum-list-title">
+                <span>{{forum.nickName}}</span>
+                <p>{{forum.issueTime}}</p>
+            </div>
+            <p>
+                {{forum.content}}
+            </p>
+            <div class="forumDetails-imgage">
+                <img ng-src="{{item}}" ng-repeat="item in forum.imageList" alt=""/>
+            </div>
+        </div>
+        <button class="btn btn-info" ng-click="checkPass();" type="button">审核通过</button>
+        <button class="btn btn-warning" ng-click="checkNothing();" type="button">审核失败</button>
+        <button class="btn btn-info" ng-click="goBack();" type="button">取消</button>
+    </div>
+</div>

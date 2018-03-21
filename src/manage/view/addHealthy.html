@@ -1,0 +1,32 @@
+<div>
+    <div class="message-top newBook">
+        <h2 class="page-header" id="txtNew">添加新资讯</h2>
+        <form name="frm" id="frm">
+            <div>
+                <label>标题:</label>
+                <input type="text" name="title" required ng-model="healthy.title"/>
+                <span class="error" ng-show="frm.title.$dirty && frm.title.$error.required">标题不能为空!</span>
+            </div>
+            <div class="firstCover">
+                <label>第一封面:</label>
+                <upload-image upload-file="firstCover" upload-option="regulation"></upload-image>
+            </div>
+            <div class="firstDes">
+                <label>第一内容:</label>
+                <textarea required name="firstDescribe" ng-model="healthy.firstDescribe"></textarea>
+                <span class="error" ng-show="frm.firstDescribe.$dirty && frm.firstDescribe.$error.required">第一内容不能为空！</span>
+            </div>
+            <div class="firstCover">
+                <label>第二封面:</label>
+                <upload-image upload-file="secondCover" upload-option="regulation"></upload-image>
+            </div>
+            <div  class="firstDes">
+                <label>第二内容:</label>
+                <textarea required name="secondDescribe" ng-model="healthy.secondDescribe"></textarea>
+                <span class="error" ng-show="frm.secondDescribe.$dirty && frm.secondDescribe.$error.required">第二内容不能为空！</span>
+            </div>
+            <button class="btn btn-info" ng-click="saveHealthy();" type="button">保存</button>
+            <button class="btn btn-info" ng-click="goBack();" type="button">取消</button>
+        </form>
+    </div>
+</div>

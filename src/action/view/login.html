@@ -1,0 +1,49 @@
+    <div>
+  <!--  <div class="head">
+        <a ui-sref="index"><img src="images/login.png" alt=""/></a>
+        <div class="logo-name">
+            <a ui-sref="index"><span>www.gulpmc.com.cn</span>
+                <span>大口吃美食网站</span></a>
+        </div>
+    </div>-->
+
+        <div class="login-conainer">
+            <div class="login-left">
+                <img src="images/login-bg.jpg">
+            </div>
+            <div class="login">
+                <div class="login-header">
+                    <span>登录</span>
+                </div>
+                <div class="login-main">
+                    <form name="frm" id="frm">
+                        <div class="login-user">
+                            <div class='icon'>
+                                <i class="fa fa-user"></i>
+                            </div>
+                            <input name="phone" required ng-model="user.phone" placeholder='用户名'  pattern="^1[3578]\d{9}$" type='text' id="phone"/>
+                            <span class="error" ng-show="frm.phone.$dirty && frm.phone.$error.required">手机号不能为空!</span>
+                            <span class="error"  ng-show="frm.phone.$dirty && frm.phone.$error.pattern">手机号格式不正确!</span>
+                        </div>
+                        <div class="login-password">
+                            <div class='icon'>
+                                <i class="fa fa-unlock-alt"></i>
+                            </div>
+                            <input name="password" ng-model="user.password" placeholder='密码' required  maxlength="16" type='password' pattern="^\w{6,12}$" id="password">
+                            <span class="error" ng-show="frm.password.$dirty && frm.password.$error.required">新密码不能为空!</span>
+                            <span class="error"  ng-show="frm.password.$dirty && frm.password.$error.pattern">密码格式不正确!</span>
+                        </div>
+                        <div class="login-code">
+                            <input type="text" required name="code" ng-model="user.code"  maxlength="4" id="code"/>
+                            <img src="http://127.0.0.1:9088/cate/ulit/codeImage.php" onclick="this.src='http://127.0.0.1:9088/cate/ulit/codeImage.php?'+Math.random();" alt="验证码"/>
+                            <span class="error" ng-show="frm.code.$dirty && frm.code.$error.required">验证码不能为空!</span>
+                        </div>
+                        <div class="login-submit">
+                            <button  id="loginBtn" ng-disabled="!frm.$valid"  ng-click="sumbit();">登录</button>
+                        </div>
+                        <span class="login-error" ng-show="loginError">手机号或密码不正确！</span>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>

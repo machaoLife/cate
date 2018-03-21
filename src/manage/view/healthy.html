@@ -1,0 +1,25 @@
+<div>
+    <div class="message-top">
+        <h2 class="page-header">健康资讯信息</h2>
+        <button class="btn btn-info addnewBook" ng-click="addHealthy();">添加新资讯</button>
+        <input type="text" class="form-control" placeholder="输入资讯名" ng-model="searchText">
+        <button class="btn btn-info search" ng-click="search();">查询</button>
+
+        <div class="group">
+            <div ng-repeat="item in pageList" class="group-item">
+                <div  class="item-header">
+                    <img ng-src="{{item.firstCover}}">
+                </div>
+                <div class="item-content">
+                    <span>名称:  {{item.title}}</span>
+                    <span>描述:{{item.firstDescribe}}</span>
+                </div>
+                <div class="item-footer">
+                    <button class="btn btn-info" ng-click="editHealthy(item.id);">编辑</button>
+                </div>
+            </div>
+        </div>
+        <page-nav conf="pageMessage" page="btnPage();"></page-nav>
+
+    </div>
+</div>

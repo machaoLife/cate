@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+	<meta charset="UTF-8">
+	<title>美食网站</title>
+	<link rel="Shortcut Icon"  href="logo.ico"  />
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/material.css">
+	<link rel="stylesheet" type="text/css" href="css/healthy.css">
+	<link rel="stylesheet" type="text/css" href="css/forum.css">
+	<link rel="stylesheet" type="text/css" href="css/menuDetails.css">
+	<link rel="stylesheet" type="text/css" href="css/materialDetails.css">
+	<link rel="stylesheet" type="text/css" href="css/healthyDetails.css">
+	<link rel="stylesheet" type="text/css" href="css/forumDetails.css">
+	<link rel="stylesheet" type="text/css" href="css/personal.css">
+	<link rel="stylesheet" type="text/css" href="css/login.css">
+	<link rel="stylesheet" type="text/css" href="css/search.css">
+	<link rel="stylesheet" type="text/css" href="lib/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/mc.dialog.css">
+</head>
+<body>
+
+	<!-- 头部 -->
+	<div class="header" ng-controller="headerController">
+		<div class="container" >
+			<div class="header-left">
+				<a href="index.html" title="">
+					<img src="images/logo.jpg" alt="">
+				</a>
+			</div>
+			<div class="header-search">
+				<input type="text" name="" ng-model="search" placeholder="请输入菜名/食材">
+				<input type="button" id="search" name="" value="搜索">
+			</div>
+			<div class="header-right">
+				<div class="header-login" ng-show="user">
+					<a ui-sref="personal.centre" class="portrait">
+						<img ng-src="{{user.header}}" alt="">
+						<span>{{user.nickName}}</span>
+					</a>
+					<a ui-sref="personal.centre" >收藏</a>
+					<a ng-click="loginout();">注销</a>
+				</div>
+				<div class="header-no-login" ng-show="!user">
+					<a ui-sref="login">
+						<img src="images/user.png" alt="" class="no-login-left">
+						<span>登录</span>
+					</a>
+					<a ui-sref="register">
+						<img src="images/register.png" class="no-login-right" alt="">
+						<span>注册</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 导航 -->
+	<div class="nav">
+		<ul class="nav-main">
+			<li><a ui-sref="home" class="active">首页</a></li>
+			<li><a ui-sref="menu">菜谱大全</a></li>
+			<li><a ui-sref="material">食材</a></li>
+			<li><a ui-sref="healthy">健康资讯</a></li>
+			<li><a ui-sref="forum">论坛专题</a></li>
+		</ul>
+	</div>
+
+	<!-- 主体 -->
+	<div class="main">
+		<ui-view></ui-view>
+	</div>
+
+	<!-- 回到底部 -->
+	<back-top class="backTop">
+		Top
+	</back-top>
+
+	<!--  底部  -->
+	<div class="footer">
+		<h4>友情链接</h4>
+		<div>
+			<a href="http://www.meishij.net">美食</a>
+			<a href="http://tizhi.meishi.cc">体质测试</a>
+			<a href="http://sj.meishi.cc/app.php?to=guanjia">伊特</a>
+			<a href="http://gd.qq.com/food/">大粤网美食</a>
+			<a href="http://www.9ku.com/ ">9酷音乐网</a>
+			<a href="http://life.iqiyi.com">爱奇艺</a>
+			<a href="http://www.yue365.com">365音乐网</a>
+			<a href="http://www.mapbar.com/">图吧</a>
+			<a href="http://baa.bitauto.com/">汽车论坛</a>
+			<a href="http://food.39.net">39健康饮食</a>
+			<a href="http://www.qqtn.com/ ">QQ下载</a>
+			<a href="http://www.meilele.com/">家居网</a>
+			<a href="http://chihe.sohu.com">搜狐美食</a>
+			<a href="http://www.meishichina.com">美食天下</a>
+			<a href="http://www.zhms.cn">中华美食网</a>
+			<a href="http://hefei.8684.cn/">合肥公交网</a>
+			<a href="http://hefei.8684.cn/">苹果圆</a>
+			<a href="http://www.canyin88.com/">红餐微杂志</a>
+			<a href="http://bj.fang.com">北京搜房网</a>
+			<a href="http://food.poco.cn/">小当家</a>
+		</div>
+		<ul class="footer-main">
+			<li><a >公司简介</a></li>
+			<li><a >企业文化</a></li>
+			<li><a >公司动态</a></li>
+			<li><a >免责声明</a></li>
+			<li><a >联系我们</a></li>
+			<li><a >招贤纳士</a></li>
+			<li><a >商务合作</a></li>
+			<li><a >网站地图</a></li>
+			<li><a >大口吃app</a></li>
+		</ul>
+		<p>版权所有归大口吃公司所有，请勿盗用本网站版权</p>
+		<p>京ICP备14030359号 京公网安备11010802009977</p>
+		<p>Copyright © 2003-2018 DAKOUC</p>
+	</div>
+
+	<script type="text/javascript" src="lib/js/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/js/mc.dialog.js"></script>
+	<script type="text/javascript" src="js/global.js"></script>
+	<script type="text/javascript" src="lib/js/angular.min.js"></script>
+	<script type="text/javascript" src="lib/js/angular-ui-router.min.js"></script>
+	<script type="text/javascript" src="lib/js/me-lazyload.js"></script>
+	<script type="text/javascript" src="js/directive.js"></script>
+	<script type="text/javascript" src="js/filter.js"></script>
+	<script type="text/javascript" src="js/service.js"></script>
+	<script type="text/javascript" src="js/controller.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

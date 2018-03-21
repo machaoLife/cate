@@ -1,0 +1,27 @@
+<div>
+    <div class="message-top newBook">
+        <h2 class="page-header" id="txtNew">添加新食材</h2>
+        <form name="frm" id="frm">
+            <div>
+                <label>食材名称:</label>
+                <input type="text" name="foodName" required ng-model="food.name"/>
+                <span class="error" ng-show="frm.foodName.$dirty && frm.foodName.$error.required">食材名称不能为空!</span>
+            </div>
+            <div>
+                <label>食材类别:</label>
+                <select class="btn"  ng-options="item.name for item in classify" ng-model="categoryId"></select>
+                <span class="error" ng-show="fm.$valid && food.categoryId==0">请选择类别!</span>
+            </div>
+            <div id="remark">
+                <label>描述:</label>
+                <textarea rows="5" cols="12" required name="describe" ng-model="food.describe" ></textarea>
+                <span class="error" ng-show="frm.describe.$dirty && frm.describe.$error.required">食材描述不能为空!</span>
+            </div>
+            <div class="addImage">
+                <upload-image upload-file="fileImage" upload-option="regulation"></upload-image>
+            </div>
+            <button class="btn btn-info" ng-click="saveFood();" type="button">保存</button>
+            <button class="btn btn-info" ng-click="goBack();" type="button">取消</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<div>
+    <div class="message-top">
+        <h2 class="page-header">食材信息</h2>
+        <button class="btn btn-info addnewBook" ng-click="addBook();">添加新食材</button>
+        <input type="text" class="form-control" placeholder="输入食材名" ng-model="searchText">
+        <button class="btn btn-info search" ng-click="search();">查询</button>
+        <select class="btn" ng-options="item.name for item in classify" ng-model="categoryId" ng-change="serarchFood();"></select>
+
+        <div class="group">
+            <div ng-repeat="item in pageList" class="group-item">
+                <div  class="item-header">
+                    <img ng-src="{{item.images[0]}}">
+                </div>
+                <div class="item-content">
+                    <span>名称:  {{item.name}}</span>
+                    <span>描述:{{item.describe}}</span>
+                </div>
+                <div class="item-footer">
+                    <button class="btn btn-info" ng-click="editBook(item.id);">编辑</button>
+                </div>
+            </div>
+        </div>
+        <page-nav conf="pageMessage" page="btnPage();"></page-nav>
+
+    </div>
+</div>

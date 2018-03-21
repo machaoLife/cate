@@ -1,0 +1,72 @@
+<div>
+    <!--
+     <div class="menu-carousel">
+        <img src="images/bgMenu-1.jpg" alt="">
+        <div class="menu-carousel-left">
+            <span class="fa fa-chevron-left"></span>
+        </div>
+        <div class="menu-carousel-right">
+            <span class="fa fa-chevron-right"></span>
+        </div>
+    </div>
+    -->
+
+
+    <!-- 菜单列表 -->
+    <div class="menu">
+        <!-- 菜单分类 -->
+        <div class="menu-category">
+            <div class="menu-category-top">
+                <span>菜单分类</span>
+                <span class="menu-active"></span>
+            </div>
+            <div class="menu-category-main">
+                <p>中国菜品:</p>
+                <div class="menu-category-right" id="type">
+                    <a ng-repeat="item in type" ng-click="getType()" ng-class="typeFilter==item.id?'menu-active':''">{{item.name}}</a>
+                </div>
+            </div>
+            <div class="menu-category-main">
+                <p>地区菜系:</p>
+                <div class="menu-category-right" id="area">
+                    <a ng-repeat="item in area" ng-click="getArea();" ng-class="areaFilter==item.id?'menu-active':''">{{item.name}}</a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-top">
+            热门菜单，大口吃的美食
+        </div>
+        <div class="menu-main">
+            <div ng-repeat="item in pageList">
+                <a ui-sref="menuDetails({menuId:item.id})" class="menu-list">
+                    <div>
+                        <img lazy-src="{{item.covers[0]}}" alt="{{item.name}}">
+                    </div>
+                    <p>{{item.name}}</p>
+                </a>
+            </div>
+            <h1 class="no-content" ng-show="data==false">该分类暂无菜谱,敬请期待更新...</h1>
+            <page-nav conf="pageMessage" page="btnPage();"></page-nav>
+        </div>
+        <!-- 推荐菜谱 -->
+        <div class="menu-bottom">
+            <div class="menu-bottom-top">推荐菜谱，最受欢迎的美食</div>
+            <div class="menu-bottom-main">
+                <div ng-repeat="item in recommend">
+                    <a ui-sref="menuDetails({menuId:item.id})">
+                        <img lazy-src="{{item.covers[0]}}" alt=""/>
+                    </a>
+                    <div class="menu-bottom-recommend">
+
+                        <a href="menuDetails({menuId:item.id})">{{item.name}}</a>
+                        <span>2018-2-15</span>
+                        <p>
+                           {{item.describe}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

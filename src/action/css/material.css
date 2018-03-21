@@ -1,0 +1,74 @@
+.material-category{
+    width: 1080px;
+    margin: 0 auto;
+    border-radius: 5px;
+    border-bottom: 1px dashed #ccc;
+}
+.material-category>h3{
+    display: inline-block;
+    line-height: 118px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-right: 40px;
+    cursor:pointer;
+}
+.vegetables-active{
+    color: #ff6767;
+}
+.material-title{
+    font-size: 28px;
+    line-height: 32px;
+    color: #bd997b;
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 40px;
+}
+.material-list{
+    width: 100%;
+    margin-bottom: 40px;
+}
+.material-list:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.material-list>a{
+    display: block;
+    width: 200px;
+    height: 250px;
+    border: 1px solid #c8c8c8;
+    box-sizing: border-box;
+    border-radius: 6px;
+    float: left;
+    margin-right: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 3px #ccc;
+}
+.material-list>a:hover span{
+    color: #ff6767;
+}
+.material-list>a:nth-child(5n){
+    margin-right: 0;
+}
+.material-list>a>img{
+    width: 150px;
+    height: 150px;
+    margin: 0 25px 25px 25px;
+    display: block;
+}
+.material-list>a>span{
+    display: block;
+    font-size: 16px;
+    color: #444;
+    height: 25px;
+}
+.material-list>a>p{
+    display: block;
+    font-size: 15px;
+    color: #666;
+    height: 25px;
+}
+.material-list p>span{
+    color: #f00;
+}

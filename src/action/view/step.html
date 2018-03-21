@@ -1,0 +1,45 @@
+<div>
+    <!-- 帖子 -->
+    <div class="centre-title">
+        <h3>我的帖子</h3>
+        <span ng-show="invitations.length">(共{{invitations.length}}篇)</span>
+    </div>
+    <div ng-show="!invitations.length&&!audit" class="centre-null">
+        <a ui-sref="issue">酷酷的用户，你还没有发帖呢，快去论坛看看！</a>
+    </div>
+    <div ng-show="!invitations.length&&audit" class="centre-null">
+        <a ui-sref="issue">酷酷的用户，等待一下管理员审核哦~</a>
+    </div>
+    <div class="centre-main">
+        <div ng-repeat="item in invitations">
+            <a ui-sref="forumDetails({forumId:item.id})" class="centre-main-image">
+                <img ng-src="{{item.imageList[0]}}" alt="{{item.title}}"/>
+            </a>
+            <div class="centre-main-content">
+                <p>
+                    <a ui-sref="menuDetails({menuId:item.id})">{{item.title}}</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- 审核中 -->
+    <div class="centre-title">
+        <h3>审核中</h3>
+        <span ng-show="audit.length">(共{{audit.length}}篇)</span>
+    </div>
+    <div ng-show="!audit.length" class="centre-null">
+        <a ui-sref="issue">暂无审核帖子</a>
+    </div>
+    <div class="centre-main">
+        <div ng-repeat="item in audit">
+            <a ui-sref="forumDetails({forumId:item.id})" class="centre-main-image">
+                <img ng-src="{{item.imageList[0]}}" alt="{{item.title}}"/>
+            </a>
+            <div class="centre-main-content">
+                <p>
+                    <a ui-sref="menuDetails({menuId:item.id})">{{item.title}}</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

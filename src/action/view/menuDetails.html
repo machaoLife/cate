@@ -1,0 +1,110 @@
+<div>
+    <div class="menuDetails-top">
+        会吃更要会制作,享受过程更快乐
+    </div>
+    <div class="menuDetails-main">
+        <!-- 菜单详情 -->
+
+        <div class="menuDetails-title">
+            <img ng-src="{{menu.covers[0]}}" alt=""/>
+            <div class="menuDetails-right">
+                <div class="menuDetails-right-top">
+                    <h1>{{menu.name}}</h1>
+                    <div>
+                        <span>美味度:</span>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="menuDetails-introduction">{{menu.describe}}</div>
+                <div class="menuDetails-category">
+                    <div>菜品: <span>家常菜</span> </div>
+                    <div>口味: <span>酸辣，葱香</span> </div>
+                    <div>工艺: <span>炒</span> </div>
+                    <div>烹饪事件: <span>10</span>分钟 </div>
+                </div>
+            </div>
+        </div>
+        <!-- 菜单材料 -->
+        <div class="menuDetails-step">
+            <div class="step-main">
+                <div>主料</div>
+                <ul>
+                    <li ng-repeat="item in menu.mainList">
+                        <span>{{item}}:</span>
+                        <span>适量</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="step-assist">
+                <div>辅料</div>
+                <ul>
+                    <li ng-repeat="item in menu.assistList">
+                        {{item}}:
+                        <span>适量</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- 菜单步骤 -->
+            <div class="step-specific">
+                <h2>具体步骤</h2>
+                <ul>
+                    <li ng-repeat="item in steps.describeList">
+                        <h3>第{{$index+1}}步</h3>
+                        <p>{{$index+1}}.{{item}}</p>
+                        <img ng-src="{{steps.imageList[$index]}}" ng-show="steps.imageList" alt=""/>
+                    </li>
+                 </ul>
+                <div class="step-collect">
+                    <div>
+                        <i class="fa fa-star" ng-class="isCollect?'':'collect'" id="collect"></i>
+                        <p>{{isCollect?'取消':''}}收藏</p>
+                    </div>
+                    <div>
+                        <i class="fa fa-heart" ng-class="maxNumber>=3?'':'collect'" id="heart" ng-click="likeMenu();"></i>
+                        <p>{{menu.likecount}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 评论 -->
+        <div class="details-comment">
+            <h2>酸辣土豆丝<span>评论</span></h2>
+            <div>
+                <div class="issue-comment">
+                    <div>
+                        <img ng-src="{{menu.covers[0]}}" alt="div"/>
+                    </div>
+                    <div>
+                        <div class="details-nologin" ng-show="!user">
+                            发布评论需要先
+                            <a ui-sref="login">登录</a>
+                        </div>
+                        <div class="details-login" ng-show="user">
+                            <textarea placeholder="输入评论" id="menuContent"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-comment">
+                    <div id="menuStep">评论</div>
+                </div>
+                <!-- 评论列表 -->
+                <div class="menu-comment-list">
+                    <div ng-repeat="item in comment">
+                        <div class="menu-comment-header">
+                            <img ng-src="{{item.header}}" alt=""/>
+                            <span>{{item.nickName}}</span>
+                        </div>
+                        <div class="menu-comment-content">
+                            <p>[随意吐槽]<span>{{item.content}}</span></p>
+                            <div>{{item.commentTime}}<span>来自大口吃</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

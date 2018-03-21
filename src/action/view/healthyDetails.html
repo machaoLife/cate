@@ -1,0 +1,36 @@
+<div>
+    <!--
+    健康资讯
+    box-shadow: 0 5px 40px 0 rgba(18,18,18,.2);
+     -->
+    <div class="healthDetails-top">
+        健康资讯,由我们为你推荐
+    </div>
+
+    <!-- 健康内容 -->
+    <div class="healthDetails-main">
+        <div class="healthDetails-left">
+            <h1>{{healthy.title}}</h1>
+            <h3>{{healthy.createTime}}</h3>
+            <div class="healthDetails-first">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;{{healthy.firstDescribe}}</p>
+                <img ng-src="{{healthy.firstCover}}" alt=""/>
+            </div>
+            <div class="healthDetails-second">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;{{healthy.secondDescribe}}</p>
+                <img ng-src="{{healthy.secondCover}}" alt=""/>
+            </div>
+        </div>
+        <div class="healthDetails-right">
+            <img src="images/forum-bg.png" alt=""/>
+            <div class="forum-issue-join">
+                <p>
+                    除了美食菜谱
+                </p>
+                <p>
+                    还有更多健康资讯,快加入大口吃family
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

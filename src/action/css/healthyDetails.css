@@ -1,0 +1,59 @@
+.healthDetails-top{
+    font-size: 28px;
+    line-height: 32px;
+    color: #bd997b;
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 40px;
+}
+.healthDetails-main{
+    width: 100%;
+    margin-bottom: 50px;
+}
+.healthDetails-main:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.healthDetails-left{
+    float: left;
+    width: 740px;
+}
+.healthDetails-left>h1{
+    text-align: center;
+    line-height: 42px;
+    color: #555;
+    font-size: 26px;
+}
+.healthDetails-left>h3{
+    text-align: center;
+    line-height: 30px;
+    color: #999;
+}
+.healthDetails-first{
+    width: 100%;
+    margin-top: 25px;
+
+}
+.healthDetails-first>img,
+.healthDetails-second>img{
+    width: 550px;
+    height: 366px;
+    display: block;
+    margin: 20px auto;
+}
+.healthDetails-first>p,
+.healthDetails-second>p{
+    line-height: 32px;
+    color: #666;
+    padding: 10px 94px 10px 95px;
+    font-size: 16px;
+}
+.healthDetails-second{
+    width: 100%;
+}
+
+.healthDetails-right{
+    float:right ;
+    width: 300px;
+}

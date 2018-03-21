@@ -1,0 +1,48 @@
+<div>
+    <!-- 发布帖子 -->
+    <div class="forum-top">
+        发布新帖子,分享您的快乐
+    </div>
+
+    <!-- 发布操作 -->
+    <div class="issue-main">
+        <div class="issue-left">
+            <form name="fim" id="fim" >
+                <h3 class="issue-left-h3">发布新帖子</h3>
+                <div class="issue-left-upload">
+                    <label>上传图片(最多8张)</label>
+                    <div id="upImage">上传图片</div>
+                    <input type="file" name="file" hidden/>
+                </div>
+                <!-- 上传图片预览 -->
+                <div class="issue-left-list"></div>
+                <!-- 标题 -->
+                <div class="issue-left-title">
+                    <label>帖子标题(必填)</label><span class="error"></span>
+                    <input type="text" required name="issueTitle" id="issueTitle" ng-model="issue.title"/>
+                    <span class="issue-error" ng-show="fim.issueTitle.$dirty && fim.issueTitle.$error.required">帖子标题不能为空!</span>
+                </div>
+                <!-- 写帖子 -->
+                <div class="issue-left-write">
+                    <label>写帖子</label><span class="error"></span>
+                    <textarea name="issueContent" required id="issueContent"ng-model="issue.content" ></textarea>
+                    <span class="issue-error" ng-show="fim.issueContent.$dirty && fim.issueContent.$error.required">帖子内容不能为空!</span>
+                </div>
+                <button id="invitation" ng-disabled="!fim.$valid">发布帖子</button>
+            </form>
+        </div>
+        <div class="forum-issue">
+            <div>
+                <img src="images/forum-bg.png" alt=""/>
+                <div class="forum-issue-join">
+                    <p>
+                        除了美食菜谱
+                    </p>
+                    <p>
+                        还有更多社区妹妹,快加入大口吃社区吧
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

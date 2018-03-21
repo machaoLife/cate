@@ -1,0 +1,108 @@
+<div>
+    <!-- 轮播 今日主打 -->
+    <div class="carousel">
+        <img src="images/bg-1.jpg" alt="">
+        <img src="images/bg-2.jpg" alt="">
+        <img src="images/bg-3.jpg" alt="">
+        <img src="images/bg-4.jpg" alt="">
+        <img src="images/bg-5.jpg" alt="">
+        <img src="images/bg-6.jpg" alt="">
+        <ul class="carousel-indicators">
+            <li class="carousel-active" data-index="1"></li>
+            <li data-index="2"></li>
+            <li data-index="3"></li>
+            <li data-index="4"></li>
+            <li data-index="5"></li>
+            <li data-index="6"></li>
+        </ul>
+        <div class="carousel-left">
+            <span class="fa fa-chevron-left"></span>
+        </div>
+        <div class="carousel-right">
+            <span class="fa fa-chevron-right"></span>
+        </div>
+    </div>
+
+    <!--  每日推荐 -->
+    <div class="recommend">
+        <div class="recommend-title">每日推荐，享受爽口的美食</div>
+        <ul class="recommend-main">
+            <li ng-repeat="item in menus.recommend">
+                <div class="recommend-main-content">
+                    <img lazy-src="{{item.covers[0]}}" >
+                    <div class="recommend-main-bottom">
+                        <h2>{{item.name}}</h2>
+                        <h2>{{item.describe}}</h2>
+                        <h3>主料：{{item.main}}</h3>
+                        <h3>辅料：{{item.assist}}</h3>
+                        <div>
+                            <a ui-sref="menuDetails({menuId:item.id})">详情</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+
+    <!--  热门菜单 -->
+    <div class="hot">
+        <div class="recommend-title">热门菜单</div>
+        <div class="hot-main">
+            <ul>
+                <li ng-repeat="item in menus.hot">
+                    <a ui-sref="menuDetails({menuId:item.id})" class="hot-main-details">
+                        <div>
+                            <img lazy-src="{{item.covers[0]}}">
+                        </div>
+                        <p>{{item.name}}</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="recommend-title">新秀菜单</div>
+        <div class="hot-main">
+            <ul>
+                <li ng-repeat="item in menus.now">
+                    <a ui-sref="menuDetails({menuId:item.id})" class="hot-main-details">
+                        <div>
+                            <img lazy-src="{{item.covers[0]}}" >
+                        </div>
+                        <p>{{item.name}}</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 精品食材 -->
+    <div class="material">
+        <div class="recommend-title">源色源味，健康品味</div>
+        <div class="material-main">
+            <ul>
+                <li ng-repeat="item in food">
+                    <a ui-sref="materialDetails({materialId:item.id})" class="material-a">
+                        <img lazy-src="{{item.images[0]}}">
+                        <p>{{item.name}}</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 健康新闻 -->
+    <div class="healthy">
+        <div class="healthy-top">健康资讯，每天多一点了解</div>
+        <ul>
+            <li ng-repeat="item in healthy">
+                <a ui-sref="healthyDetails({healthyId:item.id})">
+                    <img class="health-img" lazy-src="{{item.firstCover}}">
+                </a>
+                <div class="healthy-content">
+                    <a ui-sref="healthyDetails({healthyId:item.id})">{{item.title}}</a>
+                    <div>{{item.createTime}}</div>
+                    <div>{{item.firstDescribe}}</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

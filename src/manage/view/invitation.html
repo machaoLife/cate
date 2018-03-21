@@ -1,0 +1,32 @@
+<div>
+    <!-- 帖子管理-->
+    <div class="message-top">
+        <h2 class="page-header">帖子管理</h2>
+        <button class="btn btn-info admin" ng-click="addInvitation()">添加管理员帖子</button>
+        <input type="text" class="form-control" placeholder="输入帖子名" ng-model="searchText">
+        <button class="btn btn-info search" ng-click="search();">查询</button>
+        <button class="btn btn-info" ng-click="check()">待审核</button>
+        <button class="btn btn-default" ng-click="pass()">已通过</button>
+        <button class="btn btn-warning" ng-click="noPass()">未通过</button>
+
+        <div class="group">
+            <h3 class="page-header">{{stateContent}}</h3>
+            <div ng-repeat="item in pageList" class="group-item">
+                <div  class="item-header">
+                    <img ng-src="{{item.imageList[0]}}">
+                </div>
+                <div class="item-content">
+                    <span>名称:  {{item.title}}</span>
+                    <span>描述:{{item.content}}</span>
+                </div>
+                <div class="item-footer">
+                    <button class="btn btn-info" ng-show="item.state==1" ng-click="checkInvitation(item.id);">审核</button>
+                    <span class="item-footer-pass" ng-show="item.state==2||item.state==4">已通过</span>
+                    <span class="item-footer-nopass" ng-show="item.state==0">未通过</span>
+                </div>
+            </div>
+        </div>
+        <page-nav conf="pageMessage" page="btnPage();"></page-nav>
+
+    </div>
+</div>

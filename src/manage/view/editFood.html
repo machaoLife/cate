@@ -1,0 +1,27 @@
+<div>
+    <div class="message-top newBook">
+        <h2 class="page-header" id="txtNew">编辑新食材</h2>
+        <form name="frm" id="frm">
+            <div>
+                <input type="text" ng-model="food.id" hidden/>
+            </div>
+            <div>
+                <label>食材名称:</label>
+                <input type="text" ng-model="food.name"/>
+            </div>
+            <div>
+                <label>食材类别:</label>
+                <select class="btn" ng-options="item.name for item in classify" ng-model="categoryItem"></select>
+            </div>
+            <div id="remark">
+                <label>描述:</label>
+                <textarea rows="5" cols="12" ng-model="food.describe" ></textarea>
+            </div>
+            <div class="addImage">
+                <upload-image image="imageSrc" upload-file="fileImage" upload-option="regulation"></upload-image>
+            </div>
+            <button class="btn btn-info" ng-click="saveFood();" type="button">保存</button>
+            <button class="btn btn-info" ng-click="goBack();" type="button">取消</button>
+        </form>
+    </div>
+</div>

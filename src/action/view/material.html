@@ -1,0 +1,20 @@
+<div>
+    <!-- 食材分类 -->
+    <div class="material-category">
+        <h3 class="{{materialFilter==item.id?'vegetables-active':''}}" ng-click="getMaterCate();" ng-repeat="item in category"><i></i>{{item.name}}</h3>
+    </div>
+    <!-- 当季推荐 -->
+    <div class="material-title">
+        食材百科,值得推荐的食材
+    </div>
+
+    <!-- 食材列表 -->
+    <div class="material-list">
+        <a ui-sref="materialDetails({materialId:item.id})" ng-repeat="item in pageList">
+            <img lazy-src="{{item.images[0]}}" alt="{{item.name}}"/>
+            <span>{{item.name}}</span>
+            <p><span>5</span>种做法</p>
+        </a>
+        <page-nav conf="pageMessage" page="btnPage();"></page-nav>
+    </div>
+</div>

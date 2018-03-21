@@ -1,0 +1,75 @@
+<div>
+    <!-- 论坛头部 -->
+    <div class="forum-top">
+        {{forum.title}}
+    </div>
+
+    <!-- 论坛详情 -->
+    <div class="forumDetails-main">
+        <div class="forumDetails-left">
+            <div class="forum-list-title">
+                <img ng-src="{{forum.header}}" alt=""/>
+                <span>{{forum.nickName}}</span>
+                <p>{{forum.issueTime}}</p>
+            </div>
+            <p>
+               {{forum.content}}
+            </p>
+            <div class="forumDetails-imgage">
+                <img lazy-src="{{item}}" ng-repeat="item in forum.imageList" alt=""/>
+            </div>
+            <!-- 评论 -->
+            <div class="details-comment">
+                <h2 class="details-comment-title">帖子评论</h2>
+                <div>
+                    <div class="issue-comment">
+                        <div>
+                            <img ng-src="{{forum.imageList[0]}}" alt="div"/>
+                        </div>
+                        <div>
+                            <div class="details-nologin" ng-show="!user">
+                                发布评论需要先
+                                <a href="login.html">登录</a>
+                            </div>
+                            <div class="details-login" ng-show="user">
+                                <textarea placeholder="输入评论" id="content"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post-comment">
+                        <div id="step">评论</div>
+                    </div>
+                    <!-- 评论列表 -->
+                    <div class="menu-comment-list">
+                        <div ng-repeat="item in comment">
+                            <div class="menu-comment-header">
+                                <img ng-src="{{item.header}}" alt=""/>
+                                <span>{{item.nickName}}</span>
+                            </div>
+                            <div class="menu-comment-content">
+                                <p>[随意吐槽]<span>{{item.content}}</span></p>
+                                <div>{{item.commentTime}}<span>来自大口吃</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 发布帖子 -->
+        <div class="forum-issue">
+            <a ui-sref="issue">发布帖子</a>
+            <div>
+                <img src="images/forum-bg.png" alt=""/>
+                <div class="forum-issue-join">
+                    <p>
+                        除了美食菜谱
+                    </p>
+                    <p>
+                        还有更多社区妹妹,快加入大口吃社区吧
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

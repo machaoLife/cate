@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="lib/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/mc.dialog.css">
+</head>
+<body>
+
+    <!--头部-->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">美食网站管理平台</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="loginUser">
+                            <i class="glyphicon glyphicon-user"></i>
+                            <span id="userName">admin</span>
+                        </li>
+                        <li><a href="#">修改密码</a></li>
+                        <li><a href="login.html">注销</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    <!--导航栏-->
+    <div class="manage-nav">
+        <div class="user-message">
+            <img src="images/header1.jpg">
+            <label>Hello,<span id="helloName">admin</span></label>
+        </div>
+        <ul class="nav nav-sidebar navHover">
+            <li><i class="glyphicon glyphicon-headphones"></i><a ui-sref="home">食材分类管理模块<span class="sr-only">(current)</span></a></li>
+            <li><i class="glyphicon glyphicon-th-list"></i><a ui-sref="food">食材管理模块</a></li>
+            <!--<li><i class="glyphicon glyphicon-th-list"></i><a ui-sref="menuArea">菜谱地区管理模块</a></li>
+            <li><i class="glyphicon glyphicon-music"></i><a ui-sref="menuType">菜谱类型管理模块</a></li>-->
+            <li><i class="glyphicon glyphicon-road"></i><a ui-sref="section">栏目管理模块</a></li>
+            <li><i class="glyphicon glyphicon-calendar"></i><a ui-sref="menu">菜谱管理模块</a></li>
+            <li><i class="glyphicon glyphicon-road"></i><a ui-sref="healthy">新闻管理模块</a></li>
+            <li><i class="glyphicon glyphicon-road"></i><a ui-sref="invitation">美食论坛管理模块</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+        <ui-view></ui-view>
+    </div>
+
+
+<script src="lib/js/angular.min.js"></script>
+<script src="lib/js/angular-ui-router.min.js"></script>
+<script src="lib/js/jquery.js"></script>
+<script src="lib/js/bootstrap.min.js"></script>
+<script src="lib/js/mc.dialog.js"></script>
+<script src="js/filter.js"></script>
+<script src="js/controller.js"></script>
+<script src="js/service.js"></script>
+<script src="js/directive.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

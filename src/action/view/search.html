@@ -1,0 +1,47 @@
+<div>
+    <!-- 搜索界面 -->
+    <div class="forum-top">
+        享受最快捷,详细的搜索
+    </div>
+
+    <div class="search-main">
+        <div class="search-left">
+            <div class="search-top">
+                <input type="text" ng-model="search"/>
+                <i class="fa fa-search" ng-click="searchMenu();"></i>
+            </div>
+            <h3 ng-show="menus">共<span>{{menus.length}}</span>条结果</h3>
+            <div class="search-list">
+                <div ng-repeat="item in menus">
+                    <a ui-sref="menuDetails({menuId:item.id})">
+                        <img ng-src="{{item.covers[0]}}" alt=""/>
+                    </a>
+                    <div class="search-content">
+                        <div class="search-content-top">
+                            <a ui-sref="menuDetails({menuId:item.id})">{{item.name}}</a>
+                            <span>
+                                <i class="fa fa-heart"></i>
+                                {{item.likecount}}
+                            </span>
+                        </div>
+                        <div>{{item.describe}}</div>
+                        <p>主料：{{item.main}}</p>
+                        <p>辅料：{{item.assist}}</p>
+                    </div>
+                </div>
+                <h1 class="no-content" ng-show="searchContent">未搜索到菜谱,请重新输入...</h1>
+            </div>
+        </div>
+
+        <div class="search-right">
+            <h3>饮食健康</h3>
+            <div class="search-right-list">
+                <a ui-sref="healthyDetails({healthyId:item.id})" ng-repeat="item in healthy">
+                    <img ng-src="{{item.firstCover}}" alt="{{item.title}}"/>
+                    <span>{{item.title}}</span>
+                    <p>{{item.firstDescribe}}</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

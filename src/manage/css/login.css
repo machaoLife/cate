@@ -1,0 +1,118 @@
+html {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    color: #fff;
+    font-family: 'Microsoft YaHei';
+    background-size: 100% 100%;
+    background-image: url(../images/Starry.jpg);
+}
+body {
+    position: relative;
+    perspective: 800px;
+    width: 100%;
+    min-height: 1080px;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Gudea', sans-serif;
+    /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EA5C54 ', endColorstr='#bb6dec',GradientType=1 );*/
+}
+body p {
+    color: #D3D7F7;
+    font-size: 10px;
+    text-align: left;
+}
+.login {
+    border-radius: 6px;
+    box-shadow: -15px 15px 15px rgba(0, 20, 22, 0.3);
+    opacity:1;
+    width: 260px;
+    height: 360px;
+    position: absolute;
+    color: #D3D7F7;
+    left:50%;
+    top:40%;
+    transform: translate(-50%,-50%);
+    padding:30px;
+    background: -webkit-linear-gradient(230deg, rgba(53, 57, 74, 0) 0%, rgb(0, 0, 0) 100%);
+}
+.login-header{
+    font-size: 24px;
+    margin-bottom: 60px;
+}
+.login-user,.login-password{
+    position: relative;
+    padding-bottom: 30px;
+}
+.login-main .icon{
+    position: absolute;
+    z-index: 1;
+    left: 25px;
+    top: 10px;
+    opacity: .5;
+}
+.login-main input{
+    font-size: 15px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 45px;
+    color: #afb1be;
+    width: 260px;
+    margin-top: -2px;
+    background: rgba(57, 61, 82, 0);
+    left: 0;
+    padding: 10px 56px;
+    border:1px solid #999;
+    outline: none;
+    font-family: 'Gudea', sans-serif;
+    box-shadow: none;
+}
+.login-main input{
+    color: #89CEEB !important;
+}
+#loginBtn{
+    margin-top: 20px;
+    border-radius: 50px;
+    background: transparent;
+    width: 260px;
+    height: 40px;
+    border: 2px solid #4FA1D9;
+    color: #4FA1D9;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+}
+#loginBtn:hover{
+    color: white;
+    background: #4FA1D9;
+}
+#txtPhone-error{
+    box-sizing: border-box;
+    /* display: inline-block; */
+    width: 260px;
+    height: 24px;
+    color: #d9534f;
+    font-size: 15px;
+    position: absolute;
+    left: 10px;
+    bottom: 3px;
+}
+#txtPassword-error{
+    box-sizing: border-box;
+    position: absolute;
+    left: 10px;
+    bottom:3px;
+    width: 260px;
+    height: 24px;
+    color: #d9534f;
+    font-size: 15px;
+}
+#main,
+#linear,
+#histogram,
+#splashes
+{
+    display: inline-block;
+}

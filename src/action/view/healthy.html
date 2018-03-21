@@ -1,0 +1,58 @@
+<div>
+    <!-- 饮食健康头部 -->
+    <div class="healthy-header">
+        <div class="healthy-top-left">
+            <img src="images/healthy-bg.jpg" alt=""/>
+        </div>
+        <div class="healthy-top-right">
+            <div>每道菜,每个步骤，都有诀窍</div>
+            <h1>每一道 健康美食</h1>
+            <div class="health-introduced">
+                <p>/快乐时增添快乐，烦恼时去除烦恼/</p>
+                <p>/因为饭菜有特色，所以味道很独特/</p>
+                <p>/紧跟在美味后面的是健康/</p>
+                <p>以前只是做出一道菜，现在每一道都是健康菜!</p>
+            </div>
+        </div>
+    </div>
+    <div class="healthy-main">
+        <div class="healthy-main-top">
+            健康饮食,做你的身体小贴士
+        </div>
+        <div class="healthy-main-content">
+            <div ng-repeat="item in pageList">
+                <a ui-sref="healthyDetails({healthyId:item.id})">
+                    <img lazy-src="{{item.firstCover}}" alt=""/>
+                </a>
+                <div class="healthy-list">
+                    <a href="">{{item.title}}</a>
+                    <p>
+                        {{item.firstDescribe}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <page-nav conf="pageMessage" page="btnPage();"></page-nav>
+        <!-- 热门菜单 推荐菜单 -->
+        <div class="healthy-hot">
+            <div>
+                <h2>热门菜谱</h2>
+                <div class="healthy-hot-left">
+                    <a ui-sref="menuDetails({menuId:item.id})" ng-repeat="item in hot">
+                        <img lazy-src="{{item.covers[0]}}" alt=""/>
+                        <div>{{item.describe}}</div>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h2>推荐菜谱</h2>
+                <div class="healthy-hot-right">
+                    <a ui-sref="menuDetails({menuId:item.id})" ng-repeat="item in recommend">
+                        <img lazy-src="{{item.covers[0]}}" alt=""/>
+                        <div>{{item.describe}}</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

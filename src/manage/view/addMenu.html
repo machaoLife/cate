@@ -1,0 +1,42 @@
+<div>
+    <div class="message-top newBook">
+        <h2 class="page-header" id="txtNew">添加新菜谱</h2>
+        <form name="frm" id="frm">
+            <div>
+                <label>菜谱名称:</label>
+                <input type="text" name="name" required ng-model="menu.name"/>
+                <span class="error" ng-show="frm.menuName.$dirty && frm.menuName.$error.required">菜谱名称不能为空!</span>
+            </div>
+            <div>
+                <label>菜谱类型:</label>
+                <select class="btn" name="typeId" ng-options="item.name for item in menuType" ng-model="typeId"></select>
+                <span class="error" ng-show="fm.$valid && menu.typeId==0">请选择菜谱类型!</span>
+            </div>
+            <div>
+                <label>菜谱地区:</label>
+                <select class="btn" name="areaId"  ng-options="item.name for item in menuArea" ng-model="areaId"></select>
+                <span class="error" ng-show="fm.$valid && menu.areaId==0">请选择菜谱地区!</span>
+            </div>
+            <div>
+                <label>主料:</label>
+                <input type="text" name="main" required ng-model="menu.main"/>
+                <span class="error" ng-show="frm.main.$dirty && frm.main.$error.required">主料不能为空!</span>
+            </div>
+            <div>
+                <label>配料:</label>
+                <input type="text" name="assist" required ng-model="menu.assist"/>
+                <span class="error" ng-show="frm.assist.$dirty && frm.assist.$error.required">配料不能为空!</span>
+            </div>
+
+            <div id="describe">
+                <label>描述:</label>
+                <textarea rows="5" cols="12" required name="describe" ng-model="menu.describe" ></textarea>
+            </div>
+            <div class="addImage">
+                <upload-image upload-file="fileImage" upload-option="regulation"></upload-image>
+            </div>
+            <button class="btn btn-info" ng-click="saveMenu();" type="button">保存</button>
+            <button class="btn btn-info" ng-click="goBack();" type="button">取消</button>
+        </form>
+    </div>
+</div>

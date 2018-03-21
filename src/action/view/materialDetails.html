@@ -1,0 +1,28 @@
+<div>
+    <div class="materialDetails-title">
+        经典食材,由我们推荐给你
+    </div>
+    <!-- 食材详情 -->
+    <div class="materialDetails-top">
+        <img ng-src="{{material.images[0]}}" alt=""/>
+        <div class="materialDetails-right">
+            <h3>{{material.name}}</h3>
+            <p>
+                {{material.describe}}
+            </p>
+        </div>
+    </div>
+    <!-- 食材相关菜谱 -->
+    <div class="materialDetails-main">
+        <h2><span>{{material.name}}</span>相关的食谱</h2>
+        <div class="materialDetails-list" ng-repeat="item in menus">
+            <a ui-sref="menuDetails({menuId:item.id})" class="menu-list">
+                <div>
+                    <img ng-src="{{item.covers[0]}}" alt="{{item.name}}">
+                </div>
+                <p>{{item.name}}</p>
+            </a>
+        </div>
+        <h3 class="no-content" ng-show="menus==false">该食材暂时没有相关菜谱,敬请期待更新...</h3>
+    </div>
+</div>

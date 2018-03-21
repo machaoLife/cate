@@ -1,0 +1,192 @@
+.login {
+    margin-top: 180px;
+    /* margin-left: 116px; */
+    border: 1px solid #f2f2f2;
+    float: right;
+    box-shadow: 0 5px 40px 0 rgba(18,18,18,.2);
+    opacity:1;
+    width: 260px;
+    height: 320px;
+    position: relative;
+    color: #D3D7F7;
+    transform: translate(-50%,-50%);
+    padding:30px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+}
+.login-header{
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+.login-header>span{
+    color: #666;
+}
+.login-user{
+    position: relative;
+    padding-bottom: 25px;
+}
+.login-password{
+    position: relative;
+    padding-bottom: 25px;
+}
+.login-main{
+    position: relative;
+    height: 265px;
+}
+.login-main .icon{
+    position: absolute;
+    z-index: 1;
+    left: 25px;
+    top: 10px;
+    opacity: .5;
+}
+.login-main .icon>i{
+    color: #333;
+}
+.login-main input{
+    width: 165px;
+    padding: 0 50px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 21px;
+    font-size: 16px;
+    outline: none;
+    color: #888;
+    background-color: #f8f8f8;
+}
+#code{
+    width: 115px;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid #ddd;
+    outline: none;
+    color: #888;
+    border-radius: 21px;
+    padding: 0 15px 0 30px;
+    font-size: 15px;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+}
+.login-code>img{
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+}
+#code:hover {
+    border-color: #FF817B;
+}
+.login-code{
+    position: relative;
+    padding-bottom: 25px;
+}
+.login-verify{
+    background-color: #FF817B !important;
+    border: 1px solid #FF817B !important;
+}
+.login-code>button{
+    margin-left: 20px;
+    width: 119px;
+    height: 34px;
+    line-height: 30px;
+    border: 1px solid #ccc;
+    outline: none;
+    color: #fff;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+#loginBtn{
+    border-radius: 50px;
+    width: 260px;
+    height: 40px;
+    border: 2px solid #FF817B;
+    font-size: 15px;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    background: #FF817B;
+}
+.login-user:hover input,
+.login-user:hover i
+{
+    border-color: #FF817B;
+    color:#FF817B ;
+}
+.login-password:hover input,
+.login-password:hover i
+{
+    border-color: #FF817B;
+    color:#FF817B ;
+}
+.error{
+    position: absolute;
+    left: 20px;
+    bottom: 5px;
+    color: #f64040;
+    line-height: 20px;
+    font-size: 14px;
+}
+.login-error{
+    position: absolute;
+    left: 20px;
+    bottom: 5px;
+    color: #f64040;
+    line-height: 20px;
+    font-size: 14px;
+}
+#main,
+#linear,
+#histogram,
+#splashes
+{
+    display: inline-block;
+}
+.login-conainer{
+   width: 1300px;
+   height: 420px;
+    margin: 100px auto;
+   position: relative;
+}
+.login-main:after{
+    content: '';
+    clear: both;
+    display: block;
+}
+.login-left{
+    float: left;
+
+}
+.login-left>img{
+     display: block;
+   width: 800px;
+   height: 360px;
+}
+.head {
+    height: 100px;
+    width: 1280px;
+    margin: 40px auto;
+    position: relative;
+}
+.head>a{
+    display: block;
+    width: 108px;
+    height: 100px;
+}
+.head img{
+    display: block;
+    width: 108px;
+    height: 100px;
+}
+.logo-name {
+    position: absolute;
+    top: 40px;
+    left: 130px;
+}
+.logo-name span{
+    display: block;
+}
+.logo-name a{
+    color: #FF817B;
+    text-decoration: none;
+}

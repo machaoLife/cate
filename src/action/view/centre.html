@@ -1,0 +1,18 @@
+<div>
+    <div class="centre-title">
+        <h3>我的收藏</h3>
+        <span>(共{{collect.length}}篇)</span>
+    </div>
+    <div class="centre-main">
+        <div ng-repeat="item in collect">
+            <a ui-sref="menuDetails({menuId:item.id})" class="centre-main-image">
+                <img ng-src="{{item.covers[0]}}" alt="{{item.name}}"/>
+            </a>
+            <div class="centre-main-content">
+                <p>
+                    <a ui-sref="menuDetails({menuId:item.id})">{{item.name}}</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

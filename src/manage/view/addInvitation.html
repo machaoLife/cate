@@ -1,0 +1,31 @@
+<div>
+    <!-- 发布操作 -->
+    <div class="issue-main">
+        <div class="issue-left">
+            <form name="form" id="form" >
+                <h3 class="issue-left-h3">发布管理员帖子</h3>
+                <div class="issue-content">
+                    <div class="issue-left-upload">
+                        <label>上传图片(最多8张)</label>
+                        <div id="upImage">上传图片</div>
+                        <input type="file" name="file" id="uploadImage" hidden/>
+                    </div>
+                    <!-- 上传图片预览 -->
+                    <div class="issue-left-list"></div>
+                    <!-- 标题 -->
+                    <div class="issue-left-title">
+                        <label>帖子标题(必填)</label><span class="error"></span>
+                        <input type="text" required name="title" id="issueTitle"/>
+                    </div>
+                    <!-- 写帖子 -->
+                    <div class="issue-left-write">
+                        <label>写帖子</label><span class="error"></span>
+                        <textarea name="message" required id="issueContent" ></textarea>
+                    </div>
+                    <button id="invitation" class="btn btn-info">发布帖子</button>
+                    <button class="btn btn-info" ng-click="goBack();" type="button">取消</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

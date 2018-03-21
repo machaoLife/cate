@@ -1,0 +1,138 @@
+.forum-top{
+    font-size: 28px;
+    line-height: 32px;
+    color: #bd997b;
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 40px;
+}
+.forum-main{
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+.forum-main:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.forum-list{
+    float: left;
+    width: 740px;
+}
+.forum-list>div{
+    width: 100%;
+    padding-left: 5px;
+    padding-top: 5px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+}
+.forum-list>div:hover{
+    box-shadow: 0 5px 40px 0 rgba(18,18,18,.2);
+}
+.forum-list-title{
+    height: 40px;
+    line-height: 40px;
+}
+.forum-list-title:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.forum-list-title>img{
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.forum-list-title>span{
+    float: left;
+    font-size: 15px;
+    color: #444;
+    margin-left: 20px;
+}
+.forum-list-title>p{
+    float: left;
+    font-size: 14px;
+    color: #666;
+    margin-left: 20px;
+}
+.forum-list-main{
+    padding: 5px 0 15px 50px;
+}
+.forum-list-main>a{
+    display: block;
+}
+.forum-list-main>a>h3{
+    color: #555;
+    font-size: 17px;
+    font-weight: 600;
+}
+.forum-list-main>a>span{
+    color: #666;
+    font-size: 14px;
+    width: 423px;
+    line-height: 24px;
+    height: 48px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -moz-line-clamp:2;
+    -webkit-box-orient: vertical;
+
+}
+.forum-img-list{
+    display: block;
+    width: 590px;
+    height: 110px;
+    margin-top: 10px;
+}
+.forum-img-list:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+.forum-img-list>img{
+    display: block;
+    float: left;
+    margin: 0 10px 0 0;
+    width: 100px;
+    height: 100px;
+}
+.forum-issue{
+    float: right;
+    width:300px; ;
+}
+.forum-issue>a{
+    cursor: pointer;
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    background: #ff6767;
+    border-radius: 5px;
+}
+.forum-issue>div{
+    margin-top: 20px;
+}
+.forum-issue>div>img{
+    display: block;
+}
+.forum-issue-join{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    box-sizing: border-box;
+    padding:10px;
+    background-color: #FFA5AA;
+}
+.forum-issue-join>p{
+    line-height: 40px;
+    color: #333
+;
+}
